@@ -1,5 +1,5 @@
 require "dotacli/version"
-require "dotacli/api.rb"
+require "dotacli/api"
 require "dotacli/hero"
 
 module Dota
@@ -7,13 +7,9 @@ module Dota
   # Your code goes here...
 
   class DotaHandler
-    def initialize
-      @api = Api.new
-    end
-
     def list
       Api.get_heroes
-    end 
+    end
 
     def info(id)
       Api.get_heroes.each { |hero| Hero.new(hero) }

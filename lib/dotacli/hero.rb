@@ -1,10 +1,11 @@
 class Hero
+    
     attr_accessor :id, :name, :attack_type, :roles, :primary_attribute
     PRIMARY_ATTRIBUTE_LOOKUP = {
         'agi' => 'Agility',
         'str' => 'Strength',
         'int' => 'Intelligence'
-}.freeze
+    }.freeze
 
     @@all = {}
        
@@ -25,4 +26,4 @@ class Hero
         @@all
     end
 
-   end 
+end 
