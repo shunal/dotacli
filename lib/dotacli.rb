@@ -16,10 +16,7 @@ module Dota
     end 
 
     def info(id)
-      heroes=Api.get_heroes
-      heroes.each do |hero|
-        Hero.new(hero) 
-      end
+      Api.get_heroes.each { |hero| Hero.new(hero) }
       Hero.all[id]
     end
 
