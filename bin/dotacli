@@ -1,0 +1,16 @@
+require 'optparse'
+require 'dotacli'
+
+# TODO Implement CLI here
+
+processor = Dota::DotaHandler.new
+
+def printHeros 
+    processor.get_heroes.each do |hero|
+        puts hero.id + " " + hero.name
+    end
+end
+
+if ARGV[0] == 'list'
+    printHeros
+end
