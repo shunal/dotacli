@@ -19,7 +19,7 @@ class Hero
     end
 
     def to_s
-        "#{@id}|#{@name}|#{@attack_type}|#{@roles}|#{PRIMARY_ATTRIBUTE_LOOKUP[@primary_attribute]}"
+        "#{@name} is an #{PRIMARY_ATTRIBUTE_LOOKUP[@primary_attribute]} type of hero with a #{@attack_type} attack. This hero is a valuable asset to its team when playing the roles of #{@roles}."
     end
 
     def self.all 
