@@ -18,8 +18,12 @@ class Hero
         @@all[@id] = self 
     end
 
-    def to_s
-        "#{@name} is an #{PRIMARY_ATTRIBUTE_LOOKUP[@primary_attribute]} type of hero with a #{@attack_type} attack. This hero is a valuable asset to its team when playing the roles of #{@roles}."
+    def roles_string
+        @roles.join(", ")
+    end 
+
+    def summary
+        "#{@name} is an #{PRIMARY_ATTRIBUTE_LOOKUP[@primary_attribute]} hero with a #{@attack_type} attack. This hero is an asset to its team when playing the roles of #{roles_string}."
     end
 
     def self.all 

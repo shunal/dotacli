@@ -2,11 +2,4 @@ require 'dotacli'
 
 procc = Dota::DotaHandler.new
 
-puts "Welcome to my DotaCLI!"
-
 procc.start_program
-procc.more_info
-
-
-
-# procc.list.each {|hero| puts "#{hero["id"]} #{hero["localized_name"]}" }
