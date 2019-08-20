@@ -39,8 +39,10 @@ module Dota
         if x == "list"
           list.each {|hero| puts "#{hero["id"]} #{hero["localized_name"]}" }
         else
-          puts "Im sorry that command is not valid!"  
+          puts "Im sorry that command is not valid!"
+          line_break 
           start_program
+          puts "Type list to get started"
         end
     end
 
@@ -55,16 +57,19 @@ module Dota
     end 
 
     def info_again
-      puts "Would you like to see information on a different hero?  Type y for yes and n for no.  Type list to see the list again."
+      puts "Type y to get info on a different hero.  Type back to see the list again."
       h = gets.chomp 
       if h == "y"
         more_info
         info_again
-      elsif h =="list"
+      elsif h =="back"
+        line_break
+        puts "Type list to see the list"
         start_program
-      elsif h == "n"
-        puts "Thanks for checking out my DotaCLI!"
-        exit 
+      else 
+        puts "Im sorry that command is not valid!"
+        line_break
+        info_again
       end 
     end 
 
