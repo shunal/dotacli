@@ -1,8 +1,6 @@
 # Dotacli
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dotacli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to my dotacli gem. Dota2 is a popular PC game. In this gem, you will be able to view a list of all of the games heroes and have the option of choosing a particular hero in that list to view some more information on the particular hero.
 
 ## Installation
 
@@ -22,7 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Open your command prompt and type in the follow instructions:
+
+ $ git clone dotacli
+ $ bundle install
+ $ rake install dotacli
+ $ dotacli
 
 ## Development
 

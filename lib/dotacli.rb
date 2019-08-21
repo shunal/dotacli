@@ -52,8 +52,12 @@ module Dota
       line_break
         r = gets.chomp
         line_break
-        puts info(r.to_i).summary
-      line_break        
+        x = info(r.to_i)
+        if x
+          puts info(r.to_i).summary
+      line_break   
+        else "Sorry that hero doesnt exist"
+        end
     end 
 
     def info_again
